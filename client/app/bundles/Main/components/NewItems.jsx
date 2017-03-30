@@ -23,11 +23,12 @@ export default class NewItems extends React.Component {
   render() {
     return (
       <div>
-        <input ref='name' placeholder='Name' />
-        <input ref='description' placeholder='Description' />
-
-        {/* Remember to add .bind(this) */}
-        <button onClick={this.handleClick.bind(this)}>Submit</button>
+        <div className="column-4-12"><input ref='name' placeholder='Name' /></div>
+        <div className="column-4-12"><input ref='description' placeholder='Description' /></div>
+        <div className="column-4-12">
+          {/* Remember to add .bind(this) */}
+          <button className="button" onClick={this.handleClick.bind(this)}>Submit</button>
+        </div>
       </div>
     );
   }

@@ -5,7 +5,7 @@ import Body from '../components/Body';
 export default class Main extends React.Component {
   render() {
     return (
-      <div>
+      <div className="grid">
           <Header/>
           <Body/>
       </div>

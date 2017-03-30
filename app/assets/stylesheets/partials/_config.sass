@@ -1,0 +1,63 @@
+// Set the number of columns
+$columns: 12
+$grid-size: 800px
+
+// Breakpoints
+$desktop: 1100px
+$tablet: 700px
+$mobile: 480px
+
+$border-color: 1px solid #FFFFFF
+
+// Fonts
+$brand-font: 'Raleway', sans-serif
+$font-base: 1px
+$global-line-height: 1
+$paragraph-line-height: 1.6
+
+// Paddings
+$content-padding: 5px
+$input-padding: 10px
+
+// Utilities
+$border-radius: 2.5px
+$opacity-overlay: .5
+
+// Grid
+$column-width: 100% / $columns
+
+[class*='grid']:after
+  content: ""
+  display: table
+  clear: both
+
+.grid-full
+  width: 100%
+
+.grid
+  max-width: $grid-size
+  margin: 0 auto
+
+.column
+  display: block
+  float: left
+  padding: $content-padding
+
+.column-half
+  width: 115px
+  float: left
+
+@for $x from 1 through $columns
+  .column-#{$x}-#{$columns}
+    width: $column-width * $x
+    @extend .column
+
+@media (min-width: $mobile) and (max-width: $tablet)
+  @for $x from 1 through ($columns - 1)
+    .column-#{$x}-#{$columns}
+      width: 50%
+
+@media (max-width: $mobile)
+  @for $x from 1 through $columns
+    .column-#{$x}-#{$columns}
+      width: 100%

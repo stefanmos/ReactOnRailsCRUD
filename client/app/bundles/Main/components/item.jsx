@@ -25,11 +25,13 @@ export default class Item extends React.Component {
     var description = this.state.editable ? <input type='text' ref='description' defaultValue={this.props.item.description} />: <p>{this.props.item.description}</p>;
 
     return (
-      <div>
-          {name}
-          {description}
-          <button onClick={this.props.handleDelete} >Delete</button>
-          <button onClick={this.handleEdit.bind(this)}> {this.state.editable ? 'Submit' : 'Edit' } </button>
+      <div className="column-12-12">
+          <div className="column-4-12">{name}</div>
+          <div className="column-4-12">{description}</div>
+          <div className="column-4-12">
+            <button className="button" onClick={this.props.handleDelete} >Delete</button>
+            <button className="button" onClick={this.handleEdit.bind(this)}> {this.state.editable ? 'Submit' : 'Edit' } </button>
+          </div>
       </div>
     );
   }

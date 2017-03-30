@@ -1,0 +1,77 @@
+@import 'config'
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900)
+
+html
+  font-size: $font-base
+
+body
+  font-size: 14rem
+  font-family: $brand-font
+  line-height: $global-line-height
+  text-align: left
+
+h1,h2,h3
+  margin: 0.4em 0
+
+h1
+  font-size: 40rem
+h2
+  font-size: 39rem
+h3
+  font-size: 27rem
+p
+  font-size: 14rem
+  margin-bottom: 1em
+  line-height: $paragraph-line-height
+  font-weight: 100
+
+.button
+  display: inline-block
+  border: .5px solid #FFF
+  border-radius: $border-radius
+  border-color: #979797
+  text-align: center
+  background: none
+  font-size: 10rem
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  padding: 11px 6px
+  margin: 0 5px 0 0
+  font-weight: 500
+  font-size: 11px
+  cursor: pointer
+  color: #000
+  &:hover
+    background: #000
+    color: #FFF
+
+input, textarea
+  display: block
+  width: 100%
+  padding: $input-padding
+  margin: 0 0 10px 0
+  background: #1D1D1D
+  border: 1px solid #1D1D1D
+  border-radius: $border-radius
+  font-family: $brand-font
+  font-size: 12px
+  font-weight: 300
+  color: #7D8086
+  &:hover
+    border: 1px solid #353536
+  &:focus
+    border: 1px solid #007FFF
+
+textarea
+  height: 150px
+
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder, textarea::-webkit-input-placeholder, textarea:-moz-placeholder, textarea::-moz-placeholder, textarea:-ms-input-placeholder
+  font-family: $brand-font
+  font-size: 12px
+  font-weight: 300
+  color: #888
+
+label
+  font-size: 12px
+  font-weight: 400
+  color: #585858
